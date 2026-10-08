@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Input from "../components/Input";
 import Title from "../components/Title";
-import Button from "../components/Button";
 import ButtonCalculator from "../components/ButtonCalculator";
 import { DeleteIcon } from "lucide-react";
 
