@@ -14,10 +14,6 @@ const router = createBrowserRouter([
   {
     path: "/task",
     element: <TaskPage/>
-  },
-  {
-    path: "/calculator",
-    element: <Calculator/>
   }
 ]
 )
