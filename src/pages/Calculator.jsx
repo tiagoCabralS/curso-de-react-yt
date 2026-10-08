@@ -16,14 +16,8 @@ function Calculator() {
     setDisplay("0")
   }
 
-  function onPercentageCLick(){
-    let newDisplay = display.concat("%")
-
-    setDisplay(newDisplay)
-  }
-
-  function onSplitCLick(){
-    let newDisplay = display.concat("/")
+  function addToInput(txt){
+    let newDisplay = display.concat(txt)
 
     setDisplay(newDisplay)
   }
@@ -61,12 +55,12 @@ function Calculator() {
                   </ButtonCalculator>
                 </td>
                 <td>
-                  <ButtonCalculator onClick={() => onPercentageCLick()}>
+                  <ButtonCalculator onClick={() => addToInput("%")}>
                     <p className="font-bold">%</p>
                   </ButtonCalculator>
                 </td>
                 <td>
-                  <ButtonCalculator onClick={() => onSplitCLick()}>
+                  <ButtonCalculator onClick={() => addToInput("/")}>
                     <p className="font-bold">/</p>
                   </ButtonCalculator>
                 </td>
