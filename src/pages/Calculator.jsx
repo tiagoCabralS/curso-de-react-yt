@@ -3,6 +3,7 @@ import Input from "../components/Input";
 import Title from "../components/Title";
 import ButtonCalculator from "../components/ButtonCalculator";
 import { DeleteIcon } from "lucide-react";
+import { evaluate } from "mathjs"
 
 function Calculator() {
   function onDeleteCLick() {
@@ -21,7 +22,20 @@ function Calculator() {
     setDisplay(newDisplay)
   }
 
-  const [display, setDisplay] = useState("0");
+  function onSubmitClick(){
+    let newDisplay = display
+    try{
+        newDisplay = evaluate(newDisplay)
+    }
+    catch (erro){
+        let txt = ""
+        newDisplay = `${txt}`
+    }
+
+    setDisplay(newDisplay.toString())    
+  }
+
+  const [display, setDisplay] = useState("");
 
   return (
     <div className="w-screen h-screen bg-sky-950 flex justify-center p-6">
@@ -49,7 +63,7 @@ function Calculator() {
                   </ButtonCalculator>
                 </td>
                 <td>
-                  <ButtonCalculator onClick={() => onACClick()}>
+                  <ButtonCalculator onClick={() => setDisplay("")}>
                     <p className="font-bold">AC</p>
                   </ButtonCalculator>
                 </td>
