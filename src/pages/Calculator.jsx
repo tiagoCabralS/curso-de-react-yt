@@ -7,16 +7,22 @@ import { DeleteIcon } from "lucide-react";
 
 function Calculator() {
   function onDeleteCLick() {
-    let newDisplay = display.toString().slice(0, -1);
+    let newDisplay = display.slice(0, -1);
 
-    setDisplay(Number(newDisplay));
+    setDisplay(newDisplay);
   }
 
   function onACClick(){
     setDisplay("0")
   }
 
-  const [display, setDisplay] = useState(0);
+  function onPercentageCLick(){
+    let newDisplay = display.concat("%")
+
+    setDisplay(newDisplay)
+  }
+
+  const [display, setDisplay] = useState("0");
 
   return (
     <div className="w-screen h-screen bg-sky-950 flex justify-center p-6">
@@ -49,7 +55,7 @@ function Calculator() {
                   </ButtonCalculator>
                 </td>
                 <td>
-                  <ButtonCalculator onClick={() => onDeleteCLick()}>
+                  <ButtonCalculator onClick={() => onPercentageCLick()}>
                     <p className="font-bold">%</p>
                   </ButtonCalculator>
                 </td>
