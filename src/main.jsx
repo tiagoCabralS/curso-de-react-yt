@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import TaskPage from './pages/TaskPage.jsx'
+import Calculator from './pages/Calculator.jsx'
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: "/task",
     element: <TaskPage/>
+  },
+  {
+    path: "/calculator",
+    element: <Calculator/>
   }
 ]
 )
