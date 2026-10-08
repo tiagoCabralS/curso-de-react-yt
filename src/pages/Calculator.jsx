@@ -22,6 +22,12 @@ function Calculator() {
     setDisplay(newDisplay)
   }
 
+  function onSplitCLick(){
+    let newDisplay = display.concat("/")
+
+    setDisplay(newDisplay)
+  }
+
   const [display, setDisplay] = useState("0");
 
   return (
@@ -60,7 +66,7 @@ function Calculator() {
                   </ButtonCalculator>
                 </td>
                 <td>
-                  <ButtonCalculator onClick={() => onDeleteCLick()}>
+                  <ButtonCalculator onClick={() => onSplitCLick()}>
                     <p className="font-bold">/</p>
                   </ButtonCalculator>
                 </td>
