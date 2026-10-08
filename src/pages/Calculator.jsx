@@ -42,7 +42,7 @@ function Calculator() {
                 </td>
               </tr>
             </thead>
-            <tbody className="gap-4">
+            <tbody className="gap-4 space-y-0.5">
               <tr className="grid grid-cols-4 gap-0.5">
                 <td>
                   <ButtonCalculator onClick={() => onDeleteCLick()}>
@@ -62,6 +62,94 @@ function Calculator() {
                 <td>
                   <ButtonCalculator onClick={() => addToInput("/")}>
                     <p className="font-bold">/</p>
+                  </ButtonCalculator>
+                </td>
+              </tr>
+              <tr className="grid grid-cols-4 gap-0.5">
+                <td>
+                  <ButtonCalculator onClick={() => addToInput("7")}>
+                    <p className="font-bold">7</p>
+                  </ButtonCalculator>
+                </td>
+                <td>
+                  <ButtonCalculator onClick={() => addToInput("8")}>
+                    <p className="font-bold">8</p>
+                  </ButtonCalculator>
+                </td>
+                <td>
+                  <ButtonCalculator onClick={() => addToInput("9")}>
+                    <p className="font-bold">9</p>
+                  </ButtonCalculator>
+                </td>
+                <td>
+                  <ButtonCalculator onClick={() => addToInput("*")}>
+                    <p className="font-bold">*</p>
+                  </ButtonCalculator>
+                </td>
+              </tr>
+              <tr className="grid grid-cols-4 gap-0.5">
+                <td>
+                  <ButtonCalculator onClick={() => addToInput("4")}>
+                    <p className="font-bold">4</p>
+                  </ButtonCalculator>
+                </td>
+                <td>
+                  <ButtonCalculator onClick={() => addToInput("5")}>
+                    <p className="font-bold">5</p>
+                  </ButtonCalculator>
+                </td>
+                <td>
+                  <ButtonCalculator onClick={() => addToInput("6")}>
+                    <p className="font-bold">6</p>
+                  </ButtonCalculator>
+                </td>
+                <td>
+                  <ButtonCalculator onClick={() => addToInput("-")}>
+                    <p className="font-bold">-</p>
+                  </ButtonCalculator>
+                </td>
+              </tr>
+              <tr className="grid grid-cols-4 gap-0.5">
+                <td>
+                  <ButtonCalculator onClick={() => addToInput("1")}>
+                    <p className="font-bold">1</p>
+                  </ButtonCalculator>
+                </td>
+                <td>
+                  <ButtonCalculator onClick={() => addToInput("2")}>
+                    <p className="font-bold">2</p>
+                  </ButtonCalculator>
+                </td>
+                <td>
+                  <ButtonCalculator onClick={() => addToInput("3")}>
+                    <p className="font-bold">3</p>
+                  </ButtonCalculator>
+                </td>
+                <td>
+                  <ButtonCalculator onClick={() => addToInput("+")}>
+                    <p className="font-bold">+</p>
+                  </ButtonCalculator>
+                </td>
+              </tr>
+              <tr className="grid grid-cols-4 gap-0.5">
+                <td>
+                  <ButtonCalculator onClick={() => addToInput("")}>
+                    <p className="font-bold">+/-</p>
+                  </ButtonCalculator>
+                </td>
+                <td>
+                  <ButtonCalculator onClick={() => addToInput("0")}>
+                    <p className="font-bold">0</p>
+                  </ButtonCalculator>
+                </td>
+                <td>
+                  <ButtonCalculator onClick={() => addToInput(",")}>
+                    <p className="font-bold">,</p>
+                  </ButtonCalculator>
+                </td>
+                <td>
+                  <ButtonCalculator onClick={() => onSubmitClick()}>
+                    <p className="font-bold">=</p>
                   </ButtonCalculator>
                 </td>
               </tr>
