@@ -13,10 +13,6 @@ function Calculator() {
     setDisplay(newDisplay);
   }
 
-  function onACClick(){
-    setDisplay("0")
-  }
-
   function addToInput(txt){
     let newDisplay = display.concat(txt)
 
