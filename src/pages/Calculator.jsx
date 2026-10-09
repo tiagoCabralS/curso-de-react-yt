@@ -2,8 +2,9 @@ import { useState } from "react";
 import Input from "../components/Input";
 import Title from "../components/Title";
 import ButtonCalculator from "../components/ButtonCalculator";
-import { DeleteIcon } from "lucide-react";
+import { ChevronLeftIcon, DeleteIcon } from "lucide-react";
 import { evaluate } from "mathjs"
+import { useNavigate } from "react-router-dom";
 
 function Calculator() {
   function onDeleteCLick() {
@@ -34,13 +35,22 @@ function Calculator() {
 
     setDisplay(newDisplay.toString())    
   }
-
+  
   const [display, setDisplay] = useState("");
+  const navigate = useNavigate()
 
   return (
     <div className="w-screen h-screen bg-sky-950 flex justify-center p-6">
       <div className="w-96 space-y-4">
-        <Title>Calculadora</Title>
+        <div className="flex justify-center relative">
+          <button
+            onClick={() => navigate(-1)}
+            className="text-white absolute left-0 top-0 bottom-0"
+          >
+            <ChevronLeftIcon />
+          </button>
+          <Title>Calculadora</Title>
+        </div>
         <div className="p-6 bg-slate-200 rounded-md shadow">
           <table className="w-full">
             <thead>
