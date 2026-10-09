@@ -1,4 +1,4 @@
-import { ChevronLeftIcon, SkipBack } from "lucide-react";
+import { ChevronLeftIcon } from "lucide-react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import Title from "../components/Title";
 
