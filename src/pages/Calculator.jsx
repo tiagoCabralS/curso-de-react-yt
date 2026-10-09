@@ -154,9 +154,9 @@ function Calculator() {
               </tr>
               <tr className="grid grid-cols-4 gap-0.5">
                 <td>
-                  <ButtonCalculator onClick={() => addToInput("")}>
-                    <p className="font-bold">+/-</p>
-                  </ButtonCalculator>
+                  {/* <ButtonCalculator onClick={() => addToInput("")}>
+                    <p className="font-bold"></p>
+                  </ButtonCalculator> */}
                 </td>
                 <td>
                   <ButtonCalculator onClick={() => addToInput("0")}>
