@@ -20,7 +20,7 @@ function Calculator() {
   }
 
   function onSubmitClick(){
-    let newDisplay = display
+    let newDisplay = display.replace(",", ".")
     try{
         newDisplay = evaluate(newDisplay)
     }
@@ -29,7 +29,7 @@ function Calculator() {
         newDisplay = `${txt}`
     }
 
-    setDisplay(newDisplay.toString())    
+    setDisplay(newDisplay.toString().replace(".", ","))    
   }
   
   const [display, setDisplay] = useState("");
