@@ -3,11 +3,15 @@ import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
 import { v4 } from "uuid";
 import Title from "./components/Title";
+import { CalculatorIcon } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 function App() {
   const [tasks, setTasks] = useState(
     JSON.parse(localStorage.getItem("tasks")) || [],
   );
+    const navigate = useNavigate();
+
 
   // EFEITO QUE ACONTECE QUANDO ALGO MUDA
   // Executa a função sempre que o tasks for alterado
@@ -75,7 +79,13 @@ function App() {
   return (
     <div className="w-screen h-screen bg-sky-950 flex justify-center p-6">
       <div className="w-125 space-y-4">
-        <Title>Gerenciador de Tarefas</Title>
+        <div className="flex justify-center relative">
+          <Title>Gerenciador de Tarefas</Title>
+          <button className="absolute right-0 text-white"
+            onClick={() => navigate("/calculator")}>
+            <CalculatorIcon />
+          </button>
+        </div>
         <AddTask onAddTaskSubmit={onAddTaskSubmit} />
         <Tasks
           tasks={tasks}
