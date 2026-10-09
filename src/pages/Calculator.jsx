@@ -19,15 +19,17 @@ function Calculator() {
     setDisplay(newDisplay)
   }
 
+  function solveExpression(expression){
+    try{      
+      return evaluate(expression) 
+    }
+    catch (error){
+      return `${error}`
+    }
+  }
+
   function onSubmitClick(){
-    let newDisplay = display.replace(",", ".")
-    try{
-        newDisplay = evaluate(newDisplay)
-    }
-    catch (erro){
-        let txt = ""
-        newDisplay = `${txt}`
-    }
+    let newDisplay = solveExpression(display.replace(/,/g, '.'))
 
     setDisplay(newDisplay.toString().replace(".", ","))    
   }
